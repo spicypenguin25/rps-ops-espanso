@@ -1,0 +1,116 @@
+matches:
+  # Tech Book Email Template
+  - trigger: ":tbemail"
+    form: |
+      Hello, 
+
+      Please see the attached Tech Book for [[date]] [[network]] Network broadcast of [[event]] from [[venue]] in [[City]], [[State]].
+
+      On-Site Operations:
+      [[Ops_Producer_Name]] // [[Ops_Producer_Phone]]
+      
+      Off-Site Operations:
+      [[Ops_Coord_Name]] // [[Ops_Coord_Phone]]
+
+      If you feel sick do not come to work and notify a Ross Production Services employee ASAP to replace you.
+
+      All freelance employees being paid by Ross Production Services will receive an email following the completion of the event, 
+      this email will be specific to the event and dates of the event and will include three documents: 
+      Crew Invoice, W9, and EFT (direct deposit). If you decide to be paid as a corporation you still need to use our invoice 
+      and make sure your company name and number are on all forms.
+
+      Feel free to reach out to me directly with any questions. Have a great show!
+  # Crew Catering Shortcut - Workplace
+  - trigger: ":cc"
+    replace: "Crew Catering Meal" 
+  # Crew Craft Services - Workplace
+  - trigger: ":crafty"
+    replace: "Crew Craft Services"
+  # Workplace Meal Category Replacement
+  - trigger: ":meals"
+    replace: "RMP Events - Meals"
+  # Sunbelt Quote Request
+  - trigger: ":sunbelt"
+    form: |
+      Hello,
+
+      I am looking for a quote for the following job:
+
+      Job Site Address: [[site_address]]
+      Delivery Date: [[delivery_date]] [[delivery_time]]
+      Return Date: [[return_date]] [[return_time]]
+      PO: [[po_number]]
+
+
+      Account: 605789
+
+      Please let me know if you need anymore information from me.
+  # United Quote Request
+  - trigger: ":united"
+    form: |
+      Hello,
+
+      I am looking for a quote for the following job:
+
+      Job Site Address: [[site_address]]
+      Delivery Date: [[delivery_date]] [[delivery_time]]
+      Return Date: [[return_date]] [[return_time]]
+      PO: [[po_number]]
+
+
+
+      Account: 1380789
+
+      Please let me know if you need anymore information from me.
+  # SOS Email Template
+  - trigger: ":sos"
+    form: |
+      Hi All,
+
+      Looking to setup a shipment for [[pickup_date]].
+
+      Details Below
+
+      Thanks,
+      Brad
+
+      SOS
+      PO# [[po_number]]
+      
+      PICKUP DATE & TIME
+            [[pu_date]]
+            [[pu_time]]
+      
+      PICKUP LOCATION
+            [[pu_loc]]
+            
+      PICKUP ON-SITE CONTACT
+            [[pu_site_contact]]
+      
+      ---------------------------------------------
+      DELIVERY DATE & TIME
+            [[del_date]]
+            [[del_time]]
+      
+      DELIVERY LOCATION
+            [[del_loc]]
+            
+      DELIVERY ON-SITE CONTACT
+            [[del_site_contact]]
+      ---------------------------------------------
+
+      Total PCS: [[total_pieces]]
+      EST WGT: [[est_weight]]
+      NOTES: NO Hazardous Material
+      CONTENTS: [[contents]]
+
+      Thanks in advance!
+  # Flight Egencia
+  - trigger: "!s"
+    replace: "+ Flights (booked via Egencia) + Hotel (booked via Egencia) + Rental Car or Ubers/Lyfts (reimbursed)"
+  # Hotel Egencia
+  - trigger: "!h"
+    replace: "+ Flights (booked via Egencia) + Hotel (provided by RPS room block) + Rental Car or Ubers/Lyfts (reimbursed)"
+  # Hotel RPS
+  - trigger: "!norental"
+    replace: "+ Flights (booked via Egencia) + Hotel (booked via Egencia) + Ubers/Lyfts (reimbursed)"
