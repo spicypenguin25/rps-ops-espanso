@@ -1,1 +1,0 @@
-An espanso package for superscripts and subscripts.
